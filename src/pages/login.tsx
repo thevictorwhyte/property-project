@@ -4,11 +4,12 @@ import { useEffect, useRef } from "react";
 import { Box, Container, Typography } from "@mui/material";
 import { ThemedTitleV2 } from "@refinedev/mui";
 
+import { yariga } from "../assets";
+
 import { CredentialResponse } from "../interfaces/google";
 
 // Todo: Update your Google Client ID here
-const GOOGLE_CLIENT_ID =
-  "1041339102270-e1fpe2b6v6u1didfndh7jkjmpcashs4f.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID;
 
 export const Login: React.FC = () => {
   const { mutate: login } = useLogin<CredentialResponse>();
